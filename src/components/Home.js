@@ -45,7 +45,7 @@ export default function Home({ slides }) {
                         return (
                             <div className={index === current ? 'slide active' : 'slide'} key={index}>
                                 {index === current && (
-                                    <img src={slide.image} alt={slide.alt} className=" object-cover sm:hidden "/>
+                                    <img src={slide.image} alt={slide.alt} className=" object-cover sm:hidden w-full h-full"/>
                                     
                                 )}
                                {index === current && (
@@ -58,11 +58,11 @@ export default function Home({ slides }) {
                     })}
                     
                 </article>
-                <article className="relative md:row-span-2 flex  justify-center items-center">
+                <article className="relative md:row-span-2 flex flex-col justify-center items-center">
                     
                         {TextData.map((text, index) => {
                             return (
-                                <div className="max-w-xs md:max-w-full p-2">
+                                <div className={index === current ? 'slide max-w-xs md:max-w-full p-8 active' : 'slide'}  key={index}>
                                     {index === current && (
                                          <h2 className="font-semibold text-xl md:text-3xl text-black-800 mb-4">{text.heading}</h2>
                                         
