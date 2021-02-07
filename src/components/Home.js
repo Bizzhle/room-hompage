@@ -38,7 +38,7 @@ export default function Home({ slides }) {
     return (
         <div className="main bg-white font-spartan text-sm">
             <section className="relative sm:grid sm:grid-flow-row sm:grid-cols-3 sm:grid-rows-3 h-screen">
-                <article className="relative sm:row-span-2 sm:col-span-2 w-full border-red-600 border-8">
+                <article className="relative sm:row-span-2 sm:col-span-2 w-full">
                     <Navbar />
                     
                     {Images.map((slide, index) => {
