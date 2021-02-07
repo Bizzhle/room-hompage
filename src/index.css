@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Spartan;
+    font-weight: 500;
+    src: url(https://fonts.google.com/specimen/Spartan);
+  }
+  @font-face {
+    font-family: Spartan;
+    font-weight: 600;
+    src: url(https://fonts.google.com/specimen/Spartan);
+  }
+  @font-face {
+    font-family: Spartan;
+    font-weight: 700;
+    src: url(https://fonts.google.com/specimen/Spartan);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* .slide {
+  opacity: 0;
+  transition-duration: 1.5s ease;
 }
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1.5s ease;
+  transform: scale(1.08);
+} */
+
+/* @-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+} */
