@@ -6,29 +6,18 @@
   @font-face {
     font-family: Spartan;
     font-weight: 500;
-    src: url(https://fonts.google.com/specimen/Spartan);
-  }
-  @font-face {
-    font-family: Spartan;
-    font-weight: 600;
-    src: url(https://fonts.google.com/specimen/Spartan);
-  }
-  @font-face {
-    font-family: Spartan;
-    font-weight: 700;
-    src: url(https://fonts.google.com/specimen/Spartan);
+    src: url("https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap");
   }
 }
 
 /* .slide {
-  opacity: 0;
+  opacity: 1;
   transition-duration: 1.5s ease;
 }
 
 .slide.active {
   opacity: 1;
   transition-duration: 1.5s ease;
-  transform: scale(1.08);
 } */
 
 /* @-webkit-keyframes fade {

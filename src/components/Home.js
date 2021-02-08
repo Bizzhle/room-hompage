@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Navbar from "./Navbar.js"
+import React, { useEffect, useState } from 'react'
+import Navbar from  "./Navbar.js"
 import {Images} from "./Images"
 import {TextData} from "./TextData"
 import dark from "../images/image-about-dark.jpg";
@@ -21,11 +21,18 @@ export default function Home({ slides }) {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
 
+    useEffect(() => {
+       const timer = setInterval(() => {
+            nextSlide();
+       }, 5000)
+        return () => clearInterval(timer);
+    });
 
     if (!Array.isArray(slides) || slides.length <=0) {
         return null
     }
 
+    
     
 
 
@@ -37,14 +44,14 @@ export default function Home({ slides }) {
                     
                     {Images.map((slide, index) => {
                         return (
-                            <div className={index === current ? 'slide active' : 'slide'} key={index}>
+                            <div className={index === current ? 'slide  active' : 'slide' } key={index}>
                                 {index === current && (
                                     <img src={slide.image} alt={slide.alt} className=" object-cover md:hidden w-full h-full"/>
                                     
                                 )}
                                {index === current && (
                             
-                                    <img src={slide.images} alt={slide.alt} className="absolute hidden md:block  w-full h-full"/>
+                                    <img src={slide.images} alt={slide.alt} className="absolute hidden md:inline-block w-full h-full"/>
                             )}
                             </div>
                                 
