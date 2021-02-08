@@ -21,12 +21,12 @@ export default function Home({ slides }) {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
 
-    useEffect(() => {
-       const timer = setInterval(() => {
-            nextSlide();
-       }, 5000)
-        return () => clearInterval(timer);
-    });
+    // useEffect(() => {
+    //    const timer = setInterval(() => {
+    //         nextSlide();
+    //    }, 5000)
+    //     return () => clearInterval(timer);
+    // });
 
     if (!Array.isArray(slides) || slides.length <=0) {
         return null
@@ -44,7 +44,7 @@ export default function Home({ slides }) {
                     
                     {Images.map((slide, index) => {
                         return (
-                            <div className={index === current ? 'slide  active' : 'slide' } key={index}>
+                            <div className={index === current ? 'slide ease-in active' : 'slide' } key={index}>
                                 {index === current && (
                                     <img src={slide.image} alt={slide.alt} className=" md:hidden w-full h-full"/>
                                     
