@@ -1,11 +1,5 @@
 import React, { useState } from 'react'
 import Navbar from "./Navbar.js"
-// import mobile1 from "../images/mobile-image-hero-1.jpg";
-// import mobile2 from "../images/mobile-image-hero-2.jpg";
-// import mobile3 from "../images/mobile-image-hero-3.jpg";
-// import desktop1 from "../images/desktop-image-hero-1.jpg";
-// import desktop2 from "../images/desktop-image-hero-2.jpg";
-// import desktop3 from "../images/desktop-image-hero-3.jpg";
 import {Images} from "./Images"
 import {TextData} from "./TextData"
 import dark from "../images/image-about-dark.jpg";
@@ -37,20 +31,20 @@ export default function Home({ slides }) {
 
     return (
         <div className="main bg-white font-spartan text-sm">
-            <section className="relative sm:grid sm:grid-flow-row sm:grid-cols-3 sm:grid-rows-3 h-screen">
-                <article className="relative sm:row-span-2 sm:col-span-2 w-full">
+            <section className="relative md:grid md:grid-flow-row sm:grid-cols-3 md:grid-rows-3 h-screen">
+                <article className="relative md:row-span-2 md:col-span-2 w-full">
                     <Navbar />
                     
                     {Images.map((slide, index) => {
                         return (
                             <div className={index === current ? 'slide active' : 'slide'} key={index}>
                                 {index === current && (
-                                    <img src={slide.image} alt={slide.alt} className=" object-cover sm:hidden w-full h-full"/>
+                                    <img src={slide.image} alt={slide.alt} className=" object-cover md:hidden w-full h-full"/>
                                     
                                 )}
                                {index === current && (
                             
-                                    <img src={slide.images} alt={slide.alt} className="absolute hidden sm:block  w-full h-full"/>
+                                    <img src={slide.images} alt={slide.alt} className="absolute hidden md:block  w-full h-full"/>
                             )}
                             </div>
                                 
