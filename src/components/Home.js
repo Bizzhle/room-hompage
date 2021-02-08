@@ -46,7 +46,7 @@ export default function Home({ slides }) {
                         return (
                             <div className={index === current ? 'slide  active' : 'slide' } key={index}>
                                 {index === current && (
-                                    <img src={slide.image} alt={slide.alt} className=" object-cover md:hidden w-full h-full"/>
+                                    <img src={slide.image} alt={slide.alt} className=" md:hidden w-full h-full"/>
                                     
                                 )}
                                {index === current && (
